@@ -1,0 +1,5 @@
+.vscode/
+*.pyc
+dist/
+build/
+m3u8_downloader.egg-info/
