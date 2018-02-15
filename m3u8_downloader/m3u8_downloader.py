@@ -68,9 +68,17 @@ def download_m3u8_url(m3u8, sess,title=None, out_path='.'):
     base_file_path = os.path.abspath(os.path.dirname(out_path))
     out_path = os.path.join(base_file_path, 'outputs', title)
     file_path = os.path.join(base_file_path, 'downloads', name)
+    m3u8_path = os.path.join(base_file_path, 'm3u8')
+    try:
+        os.makedirs(os.path.join(base_file_path, 'outputs'))
+        os.makedirs(file_path)
+        os.makedirs(m3u8_path)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise  # Reraise if failed for reasons other than existing already
 
     m3u8_rsp = sess.get(m3u8)
-    with open(os.path.join(base_file_path, 'm3u8', name), 'w') as fd:
+    with open(os.path.join(m3u8_path, name), 'w') as fd:
         fd.write(m3u8_rsp.text)
     ts_urls = re.findall(r'(?<=,\n)(.*)(?=\n)', m3u8_rsp.text)
 

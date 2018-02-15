@@ -3,7 +3,7 @@ from setuptools import setup,find_packages
 
 setup(
     name='m3u8_downloader',
-    version='1.0.0',
+    version='1.0.3',
     author='Frank Yang',
     author_email='lxyangfan@gmail.com',
     license = 'MIT License',  
