@@ -7,7 +7,7 @@ setup(
     author='Frank Yang',
     author_email='lxyangfan@gmail.com',
     license = 'MIT License',  
-    url='http://www.fr4nk.cn',
+    url='https://github.com/lxyangfan/m3u8-downloader',
     description=u'这是一个m3u8视频地址下载器。 This is a downloading tool for m3u8 urls.',
     packages = find_packages(),
     install_requires = [

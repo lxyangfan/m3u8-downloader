@@ -7,7 +7,7 @@ This project provides a tool for downloading m3u8 movies.
 ## 安装
 
 ```
-pip install m3u8_downloader
+pip install m3u8-downloader
 ```
 
 ## 使用
